@@ -1,8 +1,17 @@
 aid: looking-glass-factory
 name: Looking Glass Factory
-description: 'Looking Glass Factory is a company surfaced as a portfolio company of foundry-group and
-  added to the API Evangelist network as a stub for enrichment. Sector: hardware. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Looking Glass Factory builds group-viewable 3D holographic (light field)
+  displays that require no headset — the Looking Glass Go, Portrait, and the 16",
+  27", 32", 65" and 86" Light Field and Hololuminescent displays. Beyond hardware
+  it ships a real developer surface: the Looking Glass Bridge runtime exposes a
+  local HTTP REST API for driving the on-device media player, the hosted Blocks
+  GraphQL API at blocks.glass lets apps upload and share holograms (quilt and RGBD
+  images/videos), and official SDKs cover JavaScript/TypeScript (bridge.js,
+  blocks.js, WebXR), Python (Bridge Python SDK), C/C++/C# (Core SDK), plus Unity
+  and Unreal Engine plugins. It was surfaced as a portfolio company of Foundry
+  Group and enriched from its public developer documentation, GitHub org, and
+  package registries.
 url: https://raw.githubusercontent.com/api-evangelist/looking-glass-factory/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +19,102 @@ x-backed-by:
 - foundry-group
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://cdn.prod.website-files.com/6287baba42d48260dec3a37a/69b0dd694c6b84f4eb5ae9da_HLD-7-image8.jpg
 tags:
 - Company
 - Hardware
-apis: []
+- Holographic Displays
+- 3D
+- Light Field
+- Developer Tools
+- SDK
+- GraphQL
+- WebXR
+- AR VR
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Looking Glass Blocks API
+  description: >-
+    Hosted GraphQL API for uploading, creating, and sharing holograms (quilt and
+    RGBD media) on the Looking Glass Blocks platform. Authenticated via Auth0
+    (OAuth 2.0). Official client: @lookingglass/blocks.js.
+  humanURL: https://blocks.glass
+  baseURL: https://blocks.glass/api/graphql
+  tags:
+  - GraphQL
+  - Holograms
+  - Sharing
+  properties:
+  - type: GraphQL
+    url: https://blocks.glass/api/graphql
+  - type: Documentation
+    url: https://github.com/Looking-Glass/blocks.js
+- name: Looking Glass Bridge REST API
+  description: >-
+    Local HTTP REST API exposed by the Looking Glass Bridge desktop runtime
+    (2.2.0+) to control the on-device media player — create playlists, insert
+    image/video entries (quilt and RGBD), and drive playback/transport. Served
+    over localhost loopback; no network credential. Official client:
+    @lookingglass/bridge (bridge.js).
+  humanURL: https://docs.lookingglassfactory.com/software/looking-glass-bridge-sdk
+  baseURL: https://docs.lookingglassfactory.com/software/looking-glass-bridge-sdk/web-application-integration
+  tags:
+  - REST
+  - Media Player
+  - Local
+  properties:
+  - type: Documentation
+    url: https://docs.lookingglassfactory.com/software/looking-glass-bridge-sdk/web-application-integration
 common:
 - type: Website
   url: https://lookingglassfactory.com
+- type: DeveloperPortal
+  url: https://docs.lookingglassfactory.com/
+- type: Documentation
+  url: https://docs.lookingglassfactory.com/
+- type: GettingStarted
+  url: https://docs.lookingglassfactory.com/software/looking-glass-bridge-sdk
+- type: GitHubOrganization
+  url: https://github.com/Looking-Glass
+- type: Blog
+  url: https://blog.lookingglassfactory.com/
+- type: Support
+  url: https://lookingglassfactory.com/resources
+- type: SignUp
+  url: https://blocks.glass
+- type: Packages
+  url: packages/looking-glass-factory-packages.yml
+- type: SDKs
+  url: packages/looking-glass-factory-packages.yml
+- type: Authentication
+  url: authentication/looking-glass-factory-authentication.yml
+- type: Conventions
+  url: conventions/looking-glass-factory-conventions.yml
+- type: DomainSecurity
+  url: security/looking-glass-factory-domain-security.yml
+- type: LLMsTxt
+  url: llms/looking-glass-factory-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
