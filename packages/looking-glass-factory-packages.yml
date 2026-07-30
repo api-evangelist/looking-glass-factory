@@ -1,0 +1,53 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/org/lookingglass + https://github.com/Looking-Glass
+packages:
+  - language: javascript
+    registry: npm
+    name: "@lookingglass/bridge"
+    url: https://www.npmjs.com/package/@lookingglass/bridge
+    install: npm install @lookingglass/bridge
+    version: 0.0.8-alpha.4
+    official: true
+    description: Official Looking Glass library (bridge.js) for interacting with Looking Glass holographic displays via Looking Glass Bridge 2.2.0+.
+    repository: https://github.com/Looking-Glass/bridge.js
+  - language: javascript
+    registry: npm
+    name: "@lookingglass/webxr"
+    url: https://www.npmjs.com/package/@lookingglass/webxr
+    install: npm install @lookingglass/webxr
+    version: 0.6.0
+    official: true
+    description: Official WebXR implementation for Looking Glass holographic displays.
+    repository: https://github.com/Looking-Glass/looking-glass-webxr
+  - language: javascript
+    registry: npm
+    name: "@lookingglass/blocks.js"
+    url: https://www.npmjs.com/package/@lookingglass/blocks.js
+    install: npm install @lookingglass/blocks.js
+    version: 0.2.0
+    official: true
+    description: Node.js/TypeScript client for the Looking Glass Blocks GraphQL API (upload and share holograms).
+    repository: https://github.com/Looking-Glass/blocks.js
+  - language: javascript
+    registry: npm
+    name: holoplay
+    url: https://www.npmjs.com/package/holoplay
+    install: npm install holoplay
+    version: 1.0.3
+    official: true
+    description: Legacy HoloPlay.js library — three.js-based rendering of true-3D content to the Looking Glass from the browser.
+  - language: python
+    registry: github
+    name: Bridge-Python-SDK
+    url: https://github.com/Looking-Glass/Bridge-Python-SDK
+    install: pip install git+https://github.com/Looking-Glass/Bridge-Python-SDK.git
+    official: true
+    description: Official Python SDK for Looking Glass Bridge (not published to PyPI; installed from GitHub).
+  - language: csharp
+    registry: github
+    name: LookingGlassCoreSDK
+    url: https://github.com/Looking-Glass/LookingGlassCoreSDK
+    install: git clone https://github.com/Looking-Glass/LookingGlassCoreSDK
+    official: true
+    description: HoloPlay Core SDK — C/C++/C# native integration and custom rendering pipelines for Looking Glass displays.

@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Looking-Glass/blocks.js + https://lfdocs.lookingglassfactory.com/software/looking-glass-bridge-sdk/web-application-integration
+docs: https://docs.lookingglassfactory.com/
+summary:
+  types: [oauth2, none]
+  oauth2_flows: [authorizationCode]
+  notes: >-
+    Looking Glass exposes two developer APIs with distinct auth models. The
+    hosted Blocks GraphQL API authenticates via Auth0 (OAuth 2.0 / OIDC,
+    redirect-based authorization-code login using a per-app Client ID). The
+    local Bridge HTTP REST API is served by the Looking Glass Bridge desktop
+    runtime on localhost and requires no network credential (loopback-only).
+schemes:
+  - name: Auth0 (Blocks API)
+    type: oauth2
+    flow: authorizationCode
+    provider: Auth0
+    applies_to: Blocks GraphQL API (https://blocks.glass/api/graphql)
+    detail: >-
+      "Blocks uses Auth0 under the hood for authentication." Developers request
+      a Client ID via form; blocks.js runs the OAuth redirect login and attaches
+      the resulting bearer token to GraphQL requests.
+    source: https://github.com/Looking-Glass/blocks.js
+  - name: None (Bridge local REST)
+    type: none
+    applies_to: Bridge HTTP REST API (localhost media-player control)
+    detail: >-
+      The Bridge REST API is exposed by the locally-installed Looking Glass
+      Bridge runtime over loopback; it controls the local media player and
+      carries no authentication.
+    source: https://lfdocs.lookingglassfactory.com/software/looking-glass-bridge-sdk/web-application-integration

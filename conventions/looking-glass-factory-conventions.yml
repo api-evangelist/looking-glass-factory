@@ -1,0 +1,60 @@
+generated: '2026-07-20'
+method: searched
+source: https://lfdocs.lookingglassfactory.com/software/looking-glass-bridge-sdk/web-application-integration + https://github.com/Looking-Glass/blocks.js
+summary: >-
+  Looking Glass ships two very different developer surfaces. (1) The Bridge HTTP
+  REST API is a localhost control plane for the Looking Glass Bridge media
+  player — all endpoints are POST with JSON payloads, no auth, no pagination.
+  (2) The Blocks GraphQL API is a hosted service at blocks.glass for uploading
+  and sharing holograms, authenticated with Auth0 (OAuth2). There is no
+  documented idempotency-key contract, cursor pagination convention, or
+  RFC 9457 error envelope across either surface.
+apis:
+  - name: Bridge HTTP REST API
+    style: JSON-RPC-like REST over localhost
+    transport: HTTP POST to loopback (served by Looking Glass Bridge runtime)
+    request_body: JSON
+    auth: none (loopback only)
+    representative_endpoints:
+      - /bridge_version
+      - /enter_orchestration
+      - /available_output_devices
+      - /show_window
+      - /instance_playlist
+      - /insert_playlist_entry
+      - /play_playlist
+      - /transport_control_play
+      - /transport_control_pause
+      - /transport_control_next
+      - /transport_control_previous
+      - /transport_control_seek_to_index
+      - /delete_playlist
+    preferred_client: "@lookingglass/bridge (bridge.js)"
+    source: https://lfdocs.lookingglassfactory.com/software/looking-glass-bridge-sdk/web-application-integration
+  - name: Blocks GraphQL API
+    style: GraphQL
+    endpoint: https://blocks.glass/api/graphql
+    auth: Auth0 (OAuth 2.0 authorization-code)
+    representative_operations:
+      - me
+      - uploadAndCreateQuiltHologram
+      - request (generic passthrough)
+    preferred_client: "@lookingglass/blocks.js"
+    source: https://github.com/Looking-Glass/blocks.js
+idempotency:
+  supported: false
+  detail: No documented idempotency-key header or contract on either surface.
+pagination:
+  style: unknown
+  detail: Not documented; Bridge REST is stateful playlist control, Blocks is GraphQL.
+error_handling:
+  rfc9457: false
+  detail: >-
+    Bridge REST returns JSON payloads with operation status; Blocks returns
+    GraphQL errors[] envelope. No RFC 9457 problem+json.
+versioning:
+  detail: >-
+    Bridge REST requires Looking Glass Bridge 2.2.0+; SDK packages are
+    independently semver-versioned (bridge.js alpha, webxr 0.6.0, blocks.js 0.2.0).
+related_artifacts:
+  authentication: authentication/looking-glass-factory-authentication.yml
