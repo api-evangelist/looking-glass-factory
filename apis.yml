@@ -31,7 +31,7 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 image: https://cdn.prod.website-files.com/6287baba42d48260dec3a37a/69b0dd694c6b84f4eb5ae9da_HLD-7-image8.jpg
