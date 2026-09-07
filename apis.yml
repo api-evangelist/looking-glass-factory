@@ -140,3 +140,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 5
   pass: local-v1
+x-parent: looking-glass
+x-relationship: product
