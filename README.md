@@ -64,6 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Looking Glass Factory is a company surfaced as a portfolio company of foundry-group and added to the API Evangelist network as a stub for enrichment. Sector: hardware. This profile is a lead awaiting the enrichment pipeline.
+Looking Glass Factory builds group-viewable 3D holographic (light field) displays that require no headset — the Looking Glass Go, Portrait, and the 16", 27", 32", 65" and 86" Light Field and Hololuminescent displays. Beyond hardware it ships a real developer surface: the Looking Glass Bridge runtime exposes a local HTTP REST API for driving the on-device media player, the hosted Blocks GraphQL API at blocks.glass lets apps upload and share holograms (quilt and RGBD images/videos), and official SDKs cover JavaScript/TypeScript (bridge.js, blocks.js, WebXR), Python (Bridge Python SDK), C/C++/C# (Core SDK), plus Unity and Unreal Engine plugins. It was surfaced as a portfolio company of Foundry Group and enriched from its public developer documentation, GitHub org, and package registries.
 
-Backed by: foundry-group — https://lookingglassfactory.com
+**Areas:** Company · Hardware · Holographic Displays · 3D · Light Field · Developer Tools · SDK · GraphQL · WebXR · AR/VR
+
+## Looking Glass Factory on APIs.io
+
+Everything profiled for Looking Glass Factory is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/looking-glass-factory/](https://apis.io/providers/looking-glass-factory/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Looking Glass Blocks API](https://apis.io/apis/looking-glass-factory/looking-glass-blocks-api/) — Hosted GraphQL API for uploading, creating, and sharing holograms (quilt and RGBD media) on the Looking Glass Blocks platform. Authenticated via Auth0…
+- [Looking Glass Bridge REST API](https://apis.io/apis/looking-glass-factory/looking-glass-bridge-rest-api/) — Local HTTP REST API exposed by the Looking Glass Bridge desktop runtime (2.2.0+) to control the on-device media player — create playlists, insert…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Looking Glass Factory Authentication](https://apis.io/security/looking-glass-factory/looking-glass-factory-authentication/)
+- [Looking Glass Factory Domain Security](https://apis.io/security/looking-glass-factory/looking-glass-factory-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lookingglassfactory.com)
+- [Documentation](https://docs.lookingglassfactory.com/)
+- [Getting started](https://docs.lookingglassfactory.com/software/looking-glass-bridge-sdk)
+- [Sign up](https://blocks.glass)
+- [Support](https://lookingglassfactory.com/resources)
+- [Blog](https://blog.lookingglassfactory.com/)
+- [GitHub](https://github.com/Looking-Glass)
+
+## API Evangelist rating
+
+**Kin Score 21.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 13.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/looking-glass-factory/](https://apis.io/providers/looking-glass-factory/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Looking Glass Factory: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/looking-glass-factory/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
